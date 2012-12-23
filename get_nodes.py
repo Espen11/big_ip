@@ -57,9 +57,6 @@ def write_cvs(csv):
 
 ####################################################
 
-server = 'lb2.infra.eniro'
-#server = 'load1.findexa.net'
-
 if __name__ == '__main__':
 	usage = "Usage: %prog [options]"
 	parser = OptionParser(usage=usage)
