@@ -17,6 +17,7 @@ def list_lb(server,user,password):
 	vips = b.LocalLB.VirtualServer.get_list()
 	csv = []
 	for vip in vips:
+		print vip
 		line = '%s,' % server
 		line += '%s' %vip
 	
@@ -35,7 +36,8 @@ def list_lb(server,user,password):
 				ip = values[0]
 				port = values[1]
 				line += '%s:%s;' %(ip,port)
-		print '%s\n' % line
+				print "\t%s:%s" %(ip,port)
+#		print '%s\n' % line
 		csv.append(line)
 	return csv
 
